@@ -1,10 +1,10 @@
 import React from 'react';
-import { Header } from './app/components/header/Header';
-import { Home } from './app/components/home/Home';
-import { Footer } from './app/components/footer/Footer';
+import { Header } from './src/components/header/Header';
+import { Home } from './src/components/home/Home';
+import { Footer } from './src/components/footer/Footer';
 import { Routes, Route } from 'react-router';
-import { Favorites } from './app/components/favorites/Favorites';
-import { Sightseeing } from './app/components/sightseeing/Sightseeing';
+import { Favorites } from './src/components/favorites/Favorites';
+import { Sightseeing } from './src/components/sightseeing/Sightseeing';
 import './App.scss';
 
 
