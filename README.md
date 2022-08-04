@@ -1,1 +1,7 @@
-Read me file
+Flowers application.
+
+Steps to run:
+
+1) npm install
+
+2) npm start
