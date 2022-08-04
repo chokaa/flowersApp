@@ -1,7 +1,7 @@
 import React from 'react';
 import './ModalWindow.scss';
 import { useAppSelector } from '../../state/Hooks';
-import { getModalType } from '../../state/reducers/Modal';
+import { getModalType } from '../../state/reducers/ModalSlice';
 import { ModalType } from '../../types/Modal';
 import { Login } from '../login/Login';
 import { Register } from '../register/Register';

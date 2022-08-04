@@ -1,12 +1,14 @@
+import { UserSlice } from './reducers/UserSlice';
 import { configureStore } from '@reduxjs/toolkit';
-import { FooterFlowersSlice } from './reducers/FooterFlowers';
-import { ModalSlice } from './reducers/Modal';
+import { FooterFlowersSlice } from './reducers/FooterFlowersSlice';
+import { ModalSlice } from './reducers/ModalSlice';
 
 export const store = configureStore({
   devTools: true,
   reducer: {
     footerState: FooterFlowersSlice.reducer,
-    modalState: ModalSlice.reducer
+    modalState: ModalSlice.reducer,
+    userState: UserSlice.reducer,
   },
 
   

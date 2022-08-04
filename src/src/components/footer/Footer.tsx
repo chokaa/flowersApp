@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Flower } from '../../types/Flower'
 import './Footer.scss';
 import { useAppSelector, useAppDispatch } from '../../state/Hooks';
-import { selectFlowers, addFlower } from '../../state/reducers/FooterFlowers';
+import { selectFlowers, addFlower } from '../../state/reducers/FooterFlowersSlice';
 
 export const Footer: React.FC = () => {
   const flowers = useAppSelector(selectFlowers);
