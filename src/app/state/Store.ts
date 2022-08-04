@@ -1,16 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { FooterFlowersSlice } from './reducers/FooterFlowers';
+import { ModalSlice } from './reducers/Modal';
 
 export const store = configureStore({
   devTools: true,
-  preloadedState: {
-    FooterFlowersSlice: {
-      flowers: []
-    }
-  },
   reducer: {
-    FooterFlowersSlice: FooterFlowersSlice.reducer,
+    footerState: FooterFlowersSlice.reducer,
+    modalState: ModalSlice.reducer
   },
+
   
 });
 

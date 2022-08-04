@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { PayloadAction } from '@reduxjs/toolkit/dist/createAction';
 import { Flower } from '../../types/Flower';
-import { RootState, store } from '../Store';
+import { RootState } from '../Store';
 
 export interface FooterState {
   flowers: Array<Flower>;
@@ -12,7 +12,7 @@ const initialState: FooterState = {
 };
 
 export const FooterFlowersSlice: any = createSlice({
-  name: 'footerFlowerState',
+  name: 'footerFlowersSlice',
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
@@ -26,6 +26,6 @@ export const FooterFlowersSlice: any = createSlice({
 });
 
 export const { addFlower, removeFlower } = FooterFlowersSlice.actions;
-export const selectFlowers = (state: RootState) => (<any>state.FooterFlowersSlice).flowers;
+export const selectFlowers = (state: RootState) =>(<any>state.footerState).flowers;
 
 export default FooterFlowersSlice;
