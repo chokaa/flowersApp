@@ -34,7 +34,6 @@ export const Register: React.FC = () => {
           })
           .then((response) => response.json())
           .then((data) => {
-            console.error(data)
             if (data.error) {
               setErrorVisible(true)
               setErrorMsg(data.error)

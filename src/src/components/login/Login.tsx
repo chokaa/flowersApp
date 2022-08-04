@@ -7,7 +7,6 @@ import TextField from '@mui/material/TextField';
 import { logIn } from '../../state/reducers/UserSlice';
 
 export const Login: React.FC = () => {
-
     const dispatch = useAppDispatch();
     const [errorMsg, setErrorMsg] = useState('')
     const [showError, setErrorVisible] = useState(false)
@@ -53,7 +52,7 @@ export const Login: React.FC = () => {
             </div>
           </form>
         </div>
-        { showError && <div>{errorMsg}</div>}
+        { showError && <div className="login-error">{errorMsg}</div>}
       </div>
     )
 }
