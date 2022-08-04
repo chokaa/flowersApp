@@ -2,12 +2,13 @@
   min-height: 50vh;
   height: 100%;
   width: 100%;
-  background-color: blue;
+  padding-top: 50px;
 }
 
 .flowers-container {
   display: grid;
   grid-template-columns: auto auto auto;
+  padding: 20px;
 }
 
 .flower {

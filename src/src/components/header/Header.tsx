@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
         <Link to="/sightseeing">Latest Sightseeing</Link>
         <Link to="/favorites">Favorites</Link>
         { !isUserLoggedIn ? <div className="login-button" onClick={openLogin}>Login</div> : <div className="login-button" onClick={onLogOut}>Logout</div> }
-        <div className="register-button" onClick={openRegister}>New Account</div>
+        { !isUserLoggedIn && <div className="register-button" onClick={openRegister}>New Account</div> }
       </div>
 
       <Modal

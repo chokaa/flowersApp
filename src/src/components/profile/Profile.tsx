@@ -17,7 +17,6 @@ export const Profile: React.FC = () => {
   }
 
   useEffect(() => {  
-    
     fetch('https://flowrspot-api.herokuapp.com/api/v1/users/me', {
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -32,10 +31,9 @@ export const Profile: React.FC = () => {
 
   return (
     <div className="profile">
-      <div className="user-info">{firstName}</div>
-      <div className="user-info">{lastName}</div>
+      <div className="first-name"> <TextField label="First Name" variant="outlined" disabled value={firstName}/> </div>
+      <div className="last-name"> <TextField label="Last Name" variant="outlined" disabled value={lastName}/> </div>
       <div className="logout" onClick={onLogOut}>LOGOUT</div>
-    
     </div>
   )
 }

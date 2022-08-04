@@ -17,7 +17,6 @@ export const Register: React.FC = () => {
   const [dateOfBirth, setDateOfBirth] = useState(new Date())
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    event.preventDefault();
 
     fetch('https://flowrspot-api.herokuapp.com/api/v1/users/register', {
             method: "POST",
@@ -52,7 +51,7 @@ export const Register: React.FC = () => {
   
     return (
       <div className="register">
-        <h1>REGISTER</h1> 
+        <div className="register-header">Create an Account</div>
         <div className="form">
           <form onSubmit={handleSubmit}>
             <div className="input"> <TextField name="firstName" label="First Name" variant="outlined"/> </div>
@@ -60,7 +59,7 @@ export const Register: React.FC = () => {
             <div className="input"> 
               <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <DatePicker
-                  label="Basic example"
+                  label="Date of Birth"
                   value={dateOfBirth}
                   onChange={(event: any) => { 
                     setDateOfBirth(event)
@@ -75,7 +74,7 @@ export const Register: React.FC = () => {
             
             
             <div className="button-container">
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Create account" />
             </div>
           </form>
         </div>

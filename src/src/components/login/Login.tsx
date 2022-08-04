@@ -43,13 +43,13 @@ export const Login: React.FC = () => {
 
     return (
       <div className="login">
-        <h1>LOGIN COMPONENT</h1>
+        <div className="login-header">Welcome back</div>
         <div className="form">
           <form onSubmit={handleSubmit}>
             <div className="input"> <TextField name="email" label="Email Address" variant="outlined"/> </div>
-            <div className="input"> <TextField name="password" label="Password" variant="outlined"/> </div>
+            <div className="input"> <TextField name="password" label="Password" variant="outlined" type="password"/> </div>
             <div className="button-container">
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Login to your Account" />
             </div>
           </form>
         </div>
